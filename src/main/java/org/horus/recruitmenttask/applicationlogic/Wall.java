@@ -28,12 +28,12 @@ public class Wall implements Structure{
         return blocks;
     }
     public Wall() {
-        this.blocks = new ArrayList<>();
+        blocks = new ArrayList<>();
     }
-    public void buildByCompositeBlock(CompositeBlock compositeBlock) {
-        this.blocks.addAll(compositeBlock.getBlocks());
+    public void buildByCompositeBlock(CompositeBlock compositeBlock) throws NullPointerException {
+        blocks.addAll(compositeBlock.getBlocks());
     }
     public void buildByBlock(Block block) {
-        this.blocks.add(block);
+        blocks.add(block);
     }
 }
